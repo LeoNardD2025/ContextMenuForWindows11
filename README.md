@@ -1,34 +1,32 @@
-> [!WARNING]  
-> 原版 v5.1 已支持中文（见 [Wiki](https://github.com/ikas-mc/ContextMenuForWindows11/wiki/Languages)），因此该汉化版本结束
+[!WARNING]
+The original project (v5.1) already includes Chinese language support (see the [wiki](https://github.com/ikas-mc/ContextMenuForWindows11/wiki/Languages)), so this fork focuses on the English experience.
 
-# ~~自定义右键菜单~~
+# Custom Context Menu
 
-Windows 11 创建自定义新版右键菜单
+Create and manage custom right-click menu items on Windows 11.
 
-这是汉化修改版本，原版 [Custom Context Menu](https://github.com/ikas-mc/ContextMenuForWindows11)，请支持原作者。
+This repository builds on the original [Custom Context Menu](https://github.com/ikas-mc/ContextMenuForWindows11); please support the upstream author.
 
 <img src="https://raw.githubusercontent.com/zetaloop/ContextMenuForWindows11/main/screenshots/menu.png" width=500 >
 
 
-##  下载
+## Download
 
-微软商店|Github 发行
+Microsoft Store | GitHub Releases
 ------------ | -------------
-<a href="https://www.microsoft.com/store/apps/9N3R1B2TP3DB">微软商店</a>|<a href="https://github.com/zetaloop/ContextMenuForWindows11/releases">最新发行版</a>
-微软官方软件商店下载|自签名证书发行，不推荐
+<a href="https://www.microsoft.com/store/apps/9N3R1B2TP3DB">Microsoft Store</a>|<a href="https://github.com/zetaloop/ContextMenuForWindows11/releases">Latest release</a>
+Official store download | Self-signed packages (not recommended)
 
 
 
+## Usage
+[Original help (English)](https://github.com/ikas-mc/ContextMenuForWindows11/wiki/Help)
+
+## Build
+[Original build guide](https://github.com/ikas-mc/ContextMenuForWindows11/blob/main/build.md)
 
 
-##  用法
-[原版中文帮助](https://github.com/ikas-mc/ContextMenuForWindows11/wiki/帮助)
-
-##  构建   
-[原版构建指南](https://github.com/ikas-mc/ContextMenuForWindows11/blob/main/build.md)
-
-
-##  参考
+## References
 
 https://docs.microsoft.com/en-us/windows/apps/desktop/modernize/desktop-to-uwp-extensions#context-menu
 

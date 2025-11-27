@@ -53,7 +53,7 @@ namespace ContextMenuCustomApp.View.Menu
             }
             else
             {
-                this.ShowMessage("请选中一项菜单", MessageType.Warnning);
+                this.ShowMessage("Please select a menu item", MessageType.Warnning);
             }
         }
 
@@ -61,7 +61,7 @@ namespace ContextMenuCustomApp.View.Menu
         {
             if (CommandList.SelectedItem is MenuItem item)
             {
-                var result = await Alert.ChooseAsync("确定删除这项菜单吗？", "警告");
+                var result = await Alert.ChooseAsync("Delete this menu item?", "Warning");
                 if (result)
                 {
                     await _viewModel.DeleteAsync(item);
@@ -69,7 +69,7 @@ namespace ContextMenuCustomApp.View.Menu
             }
             else
             {
-                this.ShowMessage("请选中一项菜单", MessageType.Warnning);
+                this.ShowMessage("Please select a menu item", MessageType.Warnning);
             }
         }
 
@@ -86,7 +86,7 @@ namespace ContextMenuCustomApp.View.Menu
             }
             else
             {
-                this.ShowMessage("请选中一项菜单", MessageType.Warnning);
+                this.ShowMessage("Please select a menu item", MessageType.Warnning);
             }
         }
         private async void OpenExeButton_OnClick(object sender, RoutedEventArgs e)

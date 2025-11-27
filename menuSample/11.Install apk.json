@@ -1,0 +1,1 @@
+{"title":"Install APK","exe":"PowerShell","param":" -noexit adb install -r -t \"{path}\"","icon":"","acceptExts":"","acceptDirectory":false,"acceptFile":true,"acceptMultipleFilesFlag":0,"pathDelimiter":"","paramForMultipleFiles":"","index":0}

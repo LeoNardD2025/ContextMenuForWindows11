@@ -17,7 +17,7 @@
     Version="3.5.1.0" />
 
   <Properties>
-    <DisplayName>自定义右键菜单</DisplayName>
+    <DisplayName>Custom Context Menu</DisplayName>
     <PublisherDisplayName>zetaloop</PublisherDisplayName>
     <Logo>Images\StoreLogo.png</Logo>
   </Properties>
@@ -36,8 +36,8 @@
       Executable="$targetnametoken$.exe"
       EntryPoint="$targetentrypoint$">
       <uap:VisualElements
-        DisplayName="自定义右键菜单"
-        Description="Win11 自定义右键菜单"
+        DisplayName="Custom Context Menu"
+        Description="Win11 custom context menu"
         BackgroundColor="transparent"
         Square150x150Logo="Images\Square150x150Logo.png"
         Square44x44Logo="Images\Square44x44Logo.png">
@@ -60,7 +60,7 @@
         </desktop4:Extension>
         <com:Extension Category="windows.comServer">
           <com:ComServer>
-            <com:SurrogateServer  DisplayName="自定义右键菜单">
+            <com:SurrogateServer  DisplayName="Custom Context Menu">
               <com:Class Id="46F650E5-9959-48D6-AC13-A9637C5B3787" Path="ContextMenuCustomHost.dll" ThreadingModel="STA"/>
             </com:SurrogateServer>
           </com:ComServer>

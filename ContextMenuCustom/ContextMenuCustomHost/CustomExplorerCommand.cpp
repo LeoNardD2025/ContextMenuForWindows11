@@ -52,8 +52,8 @@ IFACEMETHODIMP CustomExplorerCommand::GetTitle(_In_opt_ IShellItemArray *items, 
 		return m_commands.at(0)->GetTitle(items, name);
 	}
 
-	winrt::hstring title = winrt::unbox_value_or<winrt::hstring>(winrt::Windows::Storage::ApplicationData::Current().LocalSettings().Values().Lookup(L"Custom_Menu_Name"), L"自定义");
-	return SHStrDupW(title.data(), name);
+        winrt::hstring title = winrt::unbox_value_or<winrt::hstring>(winrt::Windows::Storage::ApplicationData::Current().LocalSettings().Values().Lookup(L"Custom_Menu_Name"), L"Custom");
+        return SHStrDupW(title.data(), name);
 }
 
 IFACEMETHODIMP CustomExplorerCommand::GetCanonicalName(_Out_ GUID *guidCommandName)
