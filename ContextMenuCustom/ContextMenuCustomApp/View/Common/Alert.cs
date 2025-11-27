@@ -6,13 +6,13 @@ namespace ContextMenuCustomApp.View.Common
 {
     public static class Alert
     {
-        public static async void InfoAsync(string content, string title = "提示")
+        public static async void InfoAsync(string content, string title = "Info")
         {
             var dialog = new ContentDialog
             {
                 Title = title,
                 PrimaryButtonText = "",
-                CloseButtonText = "取消",
+                CloseButtonText = "Cancel",
                 DefaultButton = ContentDialogButton.Close,
                 Content = content
             };
@@ -24,8 +24,8 @@ namespace ContextMenuCustomApp.View.Common
             var dialog = new ContentDialog
             {
                 Title = title,
-                PrimaryButtonText = "确定",
-                CloseButtonText = "取消",
+                PrimaryButtonText = "OK",
+                CloseButtonText = "Cancel",
                 DefaultButton = ContentDialogButton.Primary,
                 Content = content
             };

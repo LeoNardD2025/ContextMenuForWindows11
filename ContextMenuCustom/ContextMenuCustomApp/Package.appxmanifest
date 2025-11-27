@@ -18,7 +18,7 @@
   <mp:PhoneIdentity PhoneProductId="df7818f8-d328-4c65-bb9e-7e6522d6efb8" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 
   <Properties>
-    <DisplayName>自定义右键菜单</DisplayName>
+    <DisplayName>Custom Context Menu</DisplayName>
     <PublisherDisplayName>Zetaspace</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
@@ -36,10 +36,10 @@
       Executable="$targetnametoken$.exe"
       EntryPoint="MenuCustomApp.App">
       <uap:VisualElements
-        DisplayName="自定义右键菜单 (UWP)"
+        DisplayName="Custom Context Menu (UWP)"
         Square150x150Logo="Assets\Square150x150Logo.png"
         Square44x44Logo="Assets\Square44x44Logo.png"
-        Description="Win11 自定义右键菜单"
+        Description="Win11 custom context menu"
         BackgroundColor="transparent">
         <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png"/>
         <uap:SplashScreen Image="Assets\SplashScreen.png" />

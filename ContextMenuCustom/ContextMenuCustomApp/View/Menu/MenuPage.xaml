@@ -74,7 +74,7 @@
                     HorizontalAlignment="Right"
                     VerticalAlignment="Center"
                     Click="Add_Click"
-                    ToolTipService.ToolTip="添加">
+                    ToolTipService.ToolTip="Add">
                     <SymbolIcon Symbol="Add" />
                 </Button>
                 <Button
@@ -83,7 +83,7 @@
                     HorizontalAlignment="Left"
                     VerticalAlignment="Center"
                     Click="Refresh_Click"
-                    ToolTipService.ToolTip="刷新"
+                    ToolTipService.ToolTip="Refresh"
                     >
                     <Button.KeyboardAccelerators>
                         <KeyboardAccelerator Key="F5" />
@@ -96,7 +96,7 @@
                     HorizontalAlignment="Right"
                     VerticalAlignment="Center"
                     Click="Open_Folder_Click"
-                    ToolTipService.ToolTip="打开配置文件夹">
+                    ToolTipService.ToolTip="Open configuration folder">
                     <SymbolIcon Symbol="Folder" />
                 </Button>
             </StackPanel>
@@ -107,24 +107,24 @@
                 VerticalAlignment="Center"
                 Orientation="Horizontal">
                 <TextBlock VerticalAlignment="Center" TextLineBounds="Full">
-                    缓存:
+                    Cache:
                 </TextBlock>
                 <muxc:TeachingTip
                     x:Name="CacheTip"
-                    Title="关于缓存:"
-                    CloseButtonContent="懂了!"
+                    Title="About cache:"
+                    CloseButtonContent="Got it!"
                     IsLightDismissEnabled="True"
                     PlacementMargin="4"
                     PreferredPlacement="Auto"
                     Target="{x:Bind BuildCacheTipButton}">
                     <muxc:TeachingTip.Content>
                         <TextBlock>
-                            <Run>将菜单内容缓存</Run>
+                            <Run>Cache menu content</Run>
                             <LineBreak />
-                            <Run>可以优化右键菜单加载速度</Run>
+                            <Run>Improves context menu loading speed</Run>
                             <LineBreak />
                             <LineBreak />
-                            <Run>缓存时间:</Run>
+                            <Run>Cache time:</Run>
                             <LineBreak />
                             <Run Text="{Binding CacheTime}" />
                         </TextBlock>
@@ -169,13 +169,13 @@
                 Visibility="{Binding SelectedItem, ElementName=CommandList, Converter={StaticResource VisibilityConverter}}">
                 <StackPanel Padding="0,0,0,64" Orientation="Vertical">
 
-                    <controls:SettingItem Header="名称">
+                    <controls:SettingItem Header="Name">
                         <controls:SettingItem.ActionContent>
-                            <TextBox PlaceholderText="比如：用记事本打开" Text="{Binding Title, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                            <TextBox PlaceholderText="For example: Open with Notepad" Text="{Binding Title, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
                         </controls:SettingItem.ActionContent>
                     </controls:SettingItem>
 
-                    <controls:SettingItem Header="顺序">
+                    <controls:SettingItem Header="Order">
                         <controls:SettingItem.ActionContent>
                             <muxc:NumberBox
                                 Maximum="999999"
@@ -188,7 +188,7 @@
                         </controls:SettingItem.ActionContent>
                     </controls:SettingItem>
 
-                    <controls:SettingItem Header="程序">
+                    <controls:SettingItem Header="Program">
                         <controls:SettingItem.ActionContent>
                             <TextBox PlaceholderText="&quot;C:\Windows\notepad.exe&quot;"
                                      Text="{Binding Exe, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
@@ -200,14 +200,14 @@
                                 Width="56"
                                 Margin="8,0,0,-1"
                                 Click="OpenExeButton_OnClick"
-                                ToolTipService.ToolTip="选择程序文件">
+                                ToolTipService.ToolTip="Select program file">
                                 <SymbolIcon Symbol="OpenFile" />
                             </Button>
                         </controls:SettingItem.RightContent>
                     </controls:SettingItem>
 
 
-                    <controls:SettingItem Header="参数">
+                    <controls:SettingItem Header="Arguments">
                         <controls:SettingItem.ActionContent>
                             <TextBox PlaceholderText="&quot;{path}&quot;"
                                      Text="{Binding Param, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
@@ -215,39 +215,39 @@
                     </controls:SettingItem>
 
 
-                    <controls:SettingItem Header="图标">
+                    <controls:SettingItem Header="Icon">
                         <controls:SettingItem.ActionContent>
                             <TextBox PlaceholderText="&quot;c:\xxx\icon.icon&quot;"
                                      Text="{Binding Icon, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
                         </controls:SettingItem.ActionContent>
                     </controls:SettingItem>
 
-                    <controls:SettingItem Header="文件夹右键菜单">
+                    <controls:SettingItem Header="Folder context menu">
                         <controls:SettingItem.RightContent>
                             <ToggleSwitch IsOn="{Binding AcceptDirectory, Mode=TwoWay}" Style="{ThemeResource ToggleSwitchContentLelft}" />
                         </controls:SettingItem.RightContent>
                     </controls:SettingItem>
 
-                    <controls:SettingItem Header="文件右键菜单">
+                    <controls:SettingItem Header="File context menu">
                         <controls:SettingItem.RightContent>
                             <ComboBox
                                 HorizontalAlignment="Stretch"
                                 SelectedIndex="{Binding AcceptFileFlag, Mode=TwoWay}">
-                                <ComboBoxItem Content="关闭" />
-                                <ComboBoxItem Content="匹配扩展名" />
-                                <ComboBoxItem Content="正则表达式" />
+                                <ComboBoxItem Content="Off" />
+                                <ComboBoxItem Content="Match extension" />
+                                <ComboBoxItem Content="Regular expression" />
                             </ComboBox>
                         </controls:SettingItem.RightContent>
                         <controls:SettingItem.BottomContent>
                             <StackPanel Orientation="Vertical">
                                 <TextBox
-                                Header="文件扩展名"
-                                PlaceholderText="比如 .txt .zip 或 *"
+                                Header="File extensions"
+                                PlaceholderText="e.g. .txt .zip or *"
                                 Text="{Binding AcceptExts, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
                                 Visibility="{Binding AcceptFileFlag, Converter={StaticResource EqualsVisibilityConverter}, ConverterParameter=1}" />
 
                                 <TextBox
-                                Header="正则表达式"
+                                Header="Regular expression"
                                 PlaceholderText="\\.txt"
                                 Text="{Binding AcceptFileRegex, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
                                 Visibility="{Binding AcceptFileFlag, Converter={StaticResource EqualsVisibilityConverter}, ConverterParameter=2}" />
@@ -259,36 +259,36 @@
                     </controls:SettingItem>
 
 
-                    <controls:SettingItem Header="多选右键菜单">
+                    <controls:SettingItem Header="Multi-select context menu">
                         <controls:SettingItem.Description>
                             <HyperlinkButton
                                 Padding="0"
-                                NavigateUri="https://github.com/ikas-mc/ContextMenuForWindows11/wiki/帮助#多文件支持"
+                                NavigateUri="https://github.com/ikas-mc/ContextMenuForWindows11/wiki/Help#multi-file-support"
                                 RelativePanel.AlignRightWithPanel="True">
-                                <TextBlock Text="点击阅读说明" />
+                                <TextBlock Text="Read the guide" />
                             </HyperlinkButton>
                         </controls:SettingItem.Description>
                         <controls:SettingItem.RightContent>
                             <ComboBox
                                 HorizontalAlignment="Stretch"
                                 SelectedIndex="{Binding AcceptMultipleFilesFlag, Mode=TwoWay}">
-                                <ComboBoxItem Content="关闭" />
-                                <ComboBoxItem Content="批量执行（每个路径运行一次程序）" />
-                                <ComboBoxItem Content="拼合路径（只运行一次程序）" />
+                                <ComboBoxItem Content="Off" />
+                                <ComboBoxItem Content="Batch run (execute once per path)" />
+                                <ComboBoxItem Content="Merge paths (run once)" />
                             </ComboBox>
                         </controls:SettingItem.RightContent>
 
                         <controls:SettingItem.BottomContent>
                             <StackPanel Orientation="Vertical">
                                 <TextBox
-                                    Header="路径分隔符"
+                                    Header="Path delimiter"
                                     PlaceholderText="|"
                                     Text="{Binding PathDelimiter, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
                                     Visibility="{Binding AcceptMultipleFilesFlag, Converter={StaticResource EqualsVisibilityConverter}, ConverterParameter=2}" />
 
                                 <TextBox
                                     Margin="0,8,0,0"
-                                    Header="参数"
+                                    Header="Arguments"
                                     PlaceholderText="{}{path}"
                                     Text="{Binding ParamForMultipleFiles, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
                                     Visibility="{Binding AcceptMultipleFilesFlag, Converter={StaticResource EqualsVisibilityConverter}, ConverterParameter=2}" />
@@ -316,8 +316,8 @@
                     HorizontalAlignment="Center"
                     VerticalAlignment="Center">
                     <Paragraph>
-                        <Hyperlink Click="Add_Click">添加新的自定义右键菜单</Hyperlink>
-                        <Run>，编辑其他自定义菜单</Run>
+                        <Hyperlink Click="Add_Click">Add a new custom context menu</Hyperlink>
+                        <Run>, edit other custom menus</Run>
                     </Paragraph>
                 </RichTextBlock>
 
@@ -334,7 +334,7 @@
                     HorizontalAlignment="Center"
                     VerticalAlignment="Center"
                     Click="Save_Click"
-                    ToolTipService.ToolTip="保存">
+                    ToolTipService.ToolTip="Save">
                     <SymbolIcon Symbol="Save" />
                     <Button.KeyboardAccelerators>
                         <KeyboardAccelerator Modifiers="Control"
@@ -348,7 +348,7 @@
                     HorizontalAlignment="Center"
                     VerticalAlignment="Center"
                     Click="Delete_Click"
-                    ToolTipService.ToolTip="删除">
+                    ToolTipService.ToolTip="Delete">
                     <Button.KeyboardAccelerators>
                         <KeyboardAccelerator Key="Delete" />
                     </Button.KeyboardAccelerators>
@@ -361,7 +361,7 @@
                     HorizontalAlignment="Right"
                     VerticalAlignment="Center"
                     Click="Open_Click"
-                    ToolTipService.ToolTip="打开配置文件">
+                    ToolTipService.ToolTip="Open configuration file">
                     <SymbolIcon Symbol="OpenFile" />
                 </Button>
             </StackPanel>
@@ -377,9 +377,9 @@
                 <HyperlinkButton
                     Margin="4,0"
                     Padding="4"
-                    NavigateUri="https://github.com/ikas-mc/ContextMenuForWindows11/wiki/帮助">
-                    <TextBlock>
-                        <Run>帮助</Run>
+                    NavigateUri="https://github.com/ikas-mc/ContextMenuForWindows11/wiki/Help">
+                <TextBlock>
+                        <Run>Help</Run>
                     </TextBlock>
                 </HyperlinkButton>
 
@@ -387,8 +387,8 @@
                     Margin="4,0"
                     Padding="4"
                     NavigateUri="https://github.com/zetaloop/ContextMenuForWindows11">
-                    <TextBlock>
-                        <Run>汉化</Run>
+                <TextBlock>
+                        <Run>Localization</Run>
                     </TextBlock>
                 </HyperlinkButton>
 
@@ -405,7 +405,7 @@
                     <Button.Flyout>
                         <Flyout>
                             <StackPanel MinWidth="320" MinHeight="120">
-                                <TextBox Header="总菜单名称" Text="{x:Bind _viewModel.GetCustomMenuName(), BindBack=_viewModel.SetCustomMenuName, Mode=TwoWay}" />
+                                <TextBox Header="Root menu name" Text="{x:Bind _viewModel.GetCustomMenuName(), BindBack=_viewModel.SetCustomMenuName, Mode=TwoWay}" />
                             </StackPanel>
                         </Flyout>
                     </Button.Flyout>

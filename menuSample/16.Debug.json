@@ -1,0 +1,1 @@
+{"title":"Debug custom menu","exe":"customeContextMenuDebug.exe","param":" \"{path}\"","icon":"","acceptExts":"*","acceptDirectory":true,"acceptFile":true,"acceptMultipleFilesFlag":0,"pathDelimiter":",","paramForMultipleFiles":" {path}","index":0}
